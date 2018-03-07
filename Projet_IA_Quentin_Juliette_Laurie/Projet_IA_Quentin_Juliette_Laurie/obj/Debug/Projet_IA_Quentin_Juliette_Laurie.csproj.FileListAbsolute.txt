@@ -1,1 +1,2 @@
 c:\users\ltissierver\documents\visual studio 2015\Projects\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.exe.config
+H:\2A\Info\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.exe.config
