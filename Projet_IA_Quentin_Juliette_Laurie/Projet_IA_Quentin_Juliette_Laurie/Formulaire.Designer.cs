@@ -47,6 +47,13 @@
             this.textBoxDepartCheckpoint = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,7 +92,7 @@
             this.textBoxPositionDepart.AcceptsTab = true;
             this.textBoxPositionDepart.Location = new System.Drawing.Point(870, 78);
             this.textBoxPositionDepart.Name = "textBoxPositionDepart";
-            this.textBoxPositionDepart.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPositionDepart.Size = new System.Drawing.Size(24, 20);
             this.textBoxPositionDepart.TabIndex = 4;
             // 
             // textBoxPositionArrivee
@@ -93,7 +100,7 @@
             this.textBoxPositionArrivee.AcceptsTab = true;
             this.textBoxPositionArrivee.Location = new System.Drawing.Point(870, 118);
             this.textBoxPositionArrivee.Name = "textBoxPositionArrivee";
-            this.textBoxPositionArrivee.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPositionArrivee.Size = new System.Drawing.Size(24, 20);
             this.textBoxPositionArrivee.TabIndex = 5;
             // 
             // dataGridView
@@ -111,7 +118,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.BoutonChemin);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(758, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(553, 99);
@@ -121,6 +130,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.buttonCheckpoint);
             this.groupBox2.Controls.Add(this.textBoxCheckpoint4);
             this.groupBox2.Controls.Add(this.label5);
@@ -154,7 +168,7 @@
             this.textBoxCheckpoint4.AcceptsTab = true;
             this.textBoxCheckpoint4.Location = new System.Drawing.Point(113, 181);
             this.textBoxCheckpoint4.Name = "textBoxCheckpoint4";
-            this.textBoxCheckpoint4.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCheckpoint4.Size = new System.Drawing.Size(24, 20);
             this.textBoxCheckpoint4.TabIndex = 19;
             // 
             // label5
@@ -171,7 +185,7 @@
             this.textBoxCheckpoint3.AcceptsTab = true;
             this.textBoxCheckpoint3.Location = new System.Drawing.Point(113, 144);
             this.textBoxCheckpoint3.Name = "textBoxCheckpoint3";
-            this.textBoxCheckpoint3.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCheckpoint3.Size = new System.Drawing.Size(24, 20);
             this.textBoxCheckpoint3.TabIndex = 17;
             // 
             // textBoxCheckpoint2
@@ -179,7 +193,7 @@
             this.textBoxCheckpoint2.AcceptsTab = true;
             this.textBoxCheckpoint2.Location = new System.Drawing.Point(113, 104);
             this.textBoxCheckpoint2.Name = "textBoxCheckpoint2";
-            this.textBoxCheckpoint2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCheckpoint2.Size = new System.Drawing.Size(24, 20);
             this.textBoxCheckpoint2.TabIndex = 16;
             // 
             // label3
@@ -205,7 +219,7 @@
             this.textBoxCheckpoint1.AcceptsTab = true;
             this.textBoxCheckpoint1.Location = new System.Drawing.Point(113, 68);
             this.textBoxCheckpoint1.Name = "textBoxCheckpoint1";
-            this.textBoxCheckpoint1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCheckpoint1.Size = new System.Drawing.Size(24, 20);
             this.textBoxCheckpoint1.TabIndex = 13;
             // 
             // textBoxDepartCheckpoint
@@ -213,7 +227,7 @@
             this.textBoxDepartCheckpoint.AcceptsTab = true;
             this.textBoxDepartCheckpoint.Location = new System.Drawing.Point(113, 28);
             this.textBoxDepartCheckpoint.Name = "textBoxDepartCheckpoint";
-            this.textBoxDepartCheckpoint.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDepartCheckpoint.Size = new System.Drawing.Size(24, 20);
             this.textBoxDepartCheckpoint.TabIndex = 12;
             // 
             // label2
@@ -234,6 +248,62 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Position checkpoint :";
             // 
+            // textBox2
+            // 
+            this.textBox2.AcceptsTab = true;
+            this.textBox2.Location = new System.Drawing.Point(155, 63);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(24, 20);
+            this.textBox2.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.AcceptsTab = true;
+            this.textBox1.Location = new System.Drawing.Point(155, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(24, 20);
+            this.textBox1.TabIndex = 10;
+            // 
+            // textBox7
+            // 
+            this.textBox7.AcceptsTab = true;
+            this.textBox7.Location = new System.Drawing.Point(155, 181);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(24, 20);
+            this.textBox7.TabIndex = 24;
+            // 
+            // textBox6
+            // 
+            this.textBox6.AcceptsTab = true;
+            this.textBox6.Location = new System.Drawing.Point(155, 144);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(24, 20);
+            this.textBox6.TabIndex = 23;
+            // 
+            // textBox5
+            // 
+            this.textBox5.AcceptsTab = true;
+            this.textBox5.Location = new System.Drawing.Point(155, 104);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(24, 20);
+            this.textBox5.TabIndex = 22;
+            // 
+            // textBox4
+            // 
+            this.textBox4.AcceptsTab = true;
+            this.textBox4.Location = new System.Drawing.Point(155, 68);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(24, 20);
+            this.textBox4.TabIndex = 21;
+            // 
+            // textBox3
+            // 
+            this.textBox3.AcceptsTab = true;
+            this.textBox3.Location = new System.Drawing.Point(155, 28);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(24, 20);
+            this.textBox3.TabIndex = 20;
+            // 
             // Formulaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +320,7 @@
             this.Text = "Trouve le plus court chemin !";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -278,5 +349,12 @@
         private System.Windows.Forms.TextBox textBoxDepartCheckpoint;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
