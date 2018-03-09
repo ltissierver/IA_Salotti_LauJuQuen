@@ -13,3 +13,6 @@ H:\info\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin
 =======
 H:\2A\Info\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.exe.config
 >>>>>>> deaabf9b4e688b60bf94562cda66828c50f35307
+C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.exe.config
+C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\obj\Debug\Projet_IA_Quentin_Juliette_Laurie.exe
+C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\obj\Debug\Projet_IA_Quentin_Juliette_Laurie.pdb
