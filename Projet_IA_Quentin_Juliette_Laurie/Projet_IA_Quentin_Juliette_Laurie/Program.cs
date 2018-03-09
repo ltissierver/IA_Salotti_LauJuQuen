@@ -19,5 +19,6 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Formulaire());
         }
+
     }
 }
