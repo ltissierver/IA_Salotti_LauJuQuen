@@ -68,6 +68,17 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         private void BoutonChercherChemin_Click(object sender, EventArgs e)
         {
             //vérifier valeurs remplies
+            if (textBoxPositionDepart.Text=="" || textBoxPositionArrivee.Text=="")
+            {
+                textBoxPositionDepart.Text = "va";
+            }
+            //montrer différents chemins ?
+            //montrer chemin fini
+        }
+
+        private void buttonCheckpoint_Click(object sender, EventArgs e)
+        {
+            //vérifier valeurs remplies
             //montrer différents chemins ?
             //montrer chemin fini
         }
