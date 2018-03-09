@@ -70,7 +70,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             //vérifier valeurs remplies
             if (textBoxPositionDepart.Text=="" || textBoxPositionArrivee.Text=="")
             {
-                textBoxPositionDepart.Text = "va";
+                return;
             }
             //montrer différents chemins ?
             //montrer chemin fini
@@ -81,6 +81,12 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             //vérifier valeurs remplies
             //montrer différents chemins ?
             //montrer chemin fini
+        }
+
+        public bool dansLaGrille(string cellule)
+        {
+
+            return true;
         }
     }
 }
