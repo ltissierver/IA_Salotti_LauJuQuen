@@ -52,6 +52,9 @@
     <Compile Include="Formulaire.Designer.cs">
       <DependentUpon>Formulaire.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericNode.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulaire.resx">

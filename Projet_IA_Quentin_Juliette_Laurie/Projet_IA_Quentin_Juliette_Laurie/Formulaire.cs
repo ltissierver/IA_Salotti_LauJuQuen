@@ -24,12 +24,15 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public static int[] check3 = new int[2];
         public static int[] check4 = new int[2];
 
+        private Graph graph;
+
         public Formulaire()
         {
             InitializeComponent();
             initialisationGrille();
             initialisationGraphique(3,3);
             coloriageGraphique();
+            graph = new Graph();
         }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             }
         }
 
-        void coloriageGraphique()
+        private void coloriageGraphique()
         {
             //Parcourir la grille
             for (int i = 0; i < 20; i++)
@@ -92,6 +95,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                 MessageBox.Show("Entrez 2 nombres dont les 2 chiffres sont respectivement la colonne puis la ligne.");
                 return;
             }
+
             if (!int.TryParse(textBoxPositionDepart.Text, out celluleDepart[0]))
             { 
                 MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
@@ -241,14 +245,18 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return true;
         }
 
-
+        /// <summary>
+        /// initialise la grille et la liste de noeuds ouverts
+        /// </summary>
         public void initialisationGrille()
         {
+
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
                 {
                     matrice[i,j] = 1;
+                    graph.L_Ouverts.Add(new Node(i, j));
                 }
             }
             for (int i = 0; i < 20; i++)
