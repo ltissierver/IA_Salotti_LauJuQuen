@@ -54,7 +54,6 @@
     </Compile>
     <Compile Include="GenericNode.cs" />
     <Compile Include="Graph.cs" />
-    <Compile Include="grille.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

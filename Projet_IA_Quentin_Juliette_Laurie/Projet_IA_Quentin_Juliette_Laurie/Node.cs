@@ -44,12 +44,22 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public override bool EndState()
         {
-            throw new NotImplementedException();
+            return (this.x == Formulaire.celluleArrivee[0] && this.y == Formulaire.celluleArrivee[1]);
         }
 
-        public override double GetArcCost(GenericNode N2)
+        public override double GetArcCost(GenericNode N)
         {
-            throw new NotImplementedException();
+            double distance = Math.Sqrt(2);
+            Node N2 = (Node)N;
+            if ((this.x == N2.x + 1 || this.x == N2.x - 1) && this.y == N2.y)
+            {
+                distance = 1;
+            }
+            if ((this.y == N2.y + 1 || this.y == N2.y - 1) && this.x == N2.x)
+            {
+                distance = 1;
+            }
+            return distance;
         }
 
         public override List<GenericNode> GetListSucc()
@@ -99,9 +109,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return lsucc;
         }
 
-        public override bool IsEqual(GenericNode N2)
+        public override bool IsEqual(GenericNode N)
         {
-            throw new NotImplementedException();
+            Node N2 = (Node)N;
+            return (this.x == N2.x && this.y == N2.y);
         }
     }
 }
