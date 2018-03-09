@@ -21,22 +21,20 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public override double CalculeHCost()
         {
             double cout = 0;
-            /*
-             int ecartX = xfinal - x;
-             int ecartY = yfinal -y;
-             min =  minimum(ecartX,ecartY)
-             cout += sqrt(2) *min;
-             ecartX += min;
-             ecartY += min;
+            
+             int ecartX = Math.Abs(Formulaire.celluleArrivee[0] - x);
+             int ecartY = Math.Abs(Formulaire.celluleArrivee[1] - y);
+             int min = minimum(ecartX, ecartY);
+             cout += Math.Sqrt(2) * min;
+             ecartX -= min;
+             ecartY -= min;
 
-            cout += ecartX + ecartY; // sachant que u  des deux écarts = 0 
-
-            */
+            cout += ecartX + ecartY; // sachant que un des deux écarts = 0 
 
             return cout;
         }
 
-        public double minimum (double nbr1, double nbr2)
+        public int minimum (int nbr1, int nbr2)
         {
             if (nbr1 < nbr2) return nbr1;
             else return nbr2;
@@ -44,12 +42,22 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public override bool EndState()
         {
-            throw new NotImplementedException();
+            return (this.x == Formulaire.celluleArrivee[0] && this.y == Formulaire.celluleArrivee[1]);
         }
 
-        public override double GetArcCost(GenericNode N2)
+        public override double GetArcCost(GenericNode N)
         {
-            throw new NotImplementedException();
+            double distance = Math.Sqrt(2);
+            Node N2 = (Node)N;
+            if ((this.x == N2.x + 1 || this.x == N2.x - 1) && this.y == N2.y)
+            {
+                distance = 1;
+            }
+            if ((this.y == N2.y + 1 || this.y == N2.y - 1) && this.x == N2.x)
+            {
+                distance = 1;
+            }
+            return distance;
         }
 
         public override List<GenericNode> GetListSucc()
@@ -99,9 +107,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return lsucc;
         }
 
-        public override bool IsEqual(GenericNode N2)
+        public override bool IsEqual(GenericNode N)
         {
-            throw new NotImplementedException();
+            Node N2 = (Node)N;
+            return (this.x == N2.x && this.y == N2.y);
         }
     }
 }

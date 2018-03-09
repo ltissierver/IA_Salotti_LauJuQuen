@@ -28,11 +28,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public Formulaire()
         {
+            graph = new Graph();
             InitializeComponent();
             initialisationGrille();
             initialisationGraphique(3,3);
             coloriageGraphique();
-            graph = new Graph();
         }
 
         /// <summary>
@@ -136,14 +136,22 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                 {
                     // convertir le point de la matrice en node matrice[i,j]
                     // calculer son cout
-                    // node.CalculeHCost()
+                    foreach (Node node in graph.L_Ouverts)
+                    {
+                        node.CalculeHCost();
+                    }
                 }
             }
-
-
-            //montrer différents chemins ?
+            //appliquer l'algo
+            List<GenericNode> solution= graph.RechercheSolutionAEtoile(new Node(celluleDepart[0], celluleDepart[1]));
+            foreach(GenericNode n in solution)
+            {
+                Node node = (Node)n;
+                matrice[node.x, node.y] = 5;
+            }
             //montrer chemin fini
             coloriageGraphique();
+            textBox2.Text = solution.Count.ToString();
         }
 
         private void buttonCheckpoint_Click(object sender, EventArgs e)
@@ -250,7 +258,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         /// </summary>
         public void initialisationGrille()
         {
-
+            graph.L_Ouverts = new List<GenericNode>();
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
@@ -333,6 +341,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             matrice[17,11] = 0;
             matrice[18,10] = 0;
             matrice[18,11] = 0;
+
+        }
+
+        private void textBoxPositionArrivee_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

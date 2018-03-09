@@ -35,7 +35,14 @@
             this.textBoxPositionArrivee = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.buttonCheckpoint = new System.Windows.Forms.Button();
             this.textBoxCheckpoint4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,13 +54,6 @@
             this.textBoxDepartCheckpoint = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -102,6 +102,7 @@
             this.textBoxPositionArrivee.Name = "textBoxPositionArrivee";
             this.textBoxPositionArrivee.Size = new System.Drawing.Size(24, 20);
             this.textBoxPositionArrivee.TabIndex = 5;
+            this.textBoxPositionArrivee.TextChanged += new System.EventHandler(this.textBoxPositionArrivee_TextChanged);
             // 
             // dataGridView
             // 
@@ -128,6 +129,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parcours de A à B";
             // 
+            // textBox2
+            // 
+            this.textBox2.AcceptsTab = true;
+            this.textBox2.Location = new System.Drawing.Point(155, 63);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(24, 20);
+            this.textBox2.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.AcceptsTab = true;
+            this.textBox1.Location = new System.Drawing.Point(155, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(24, 20);
+            this.textBox1.TabIndex = 10;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox7);
@@ -152,6 +169,46 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Parcours à checkpoint";
+            // 
+            // textBox7
+            // 
+            this.textBox7.AcceptsTab = true;
+            this.textBox7.Location = new System.Drawing.Point(155, 181);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(24, 20);
+            this.textBox7.TabIndex = 24;
+            // 
+            // textBox6
+            // 
+            this.textBox6.AcceptsTab = true;
+            this.textBox6.Location = new System.Drawing.Point(155, 144);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(24, 20);
+            this.textBox6.TabIndex = 23;
+            // 
+            // textBox5
+            // 
+            this.textBox5.AcceptsTab = true;
+            this.textBox5.Location = new System.Drawing.Point(155, 104);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(24, 20);
+            this.textBox5.TabIndex = 22;
+            // 
+            // textBox4
+            // 
+            this.textBox4.AcceptsTab = true;
+            this.textBox4.Location = new System.Drawing.Point(155, 68);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(24, 20);
+            this.textBox4.TabIndex = 21;
+            // 
+            // textBox3
+            // 
+            this.textBox3.AcceptsTab = true;
+            this.textBox3.Location = new System.Drawing.Point(155, 28);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(24, 20);
+            this.textBox3.TabIndex = 20;
             // 
             // buttonCheckpoint
             // 
@@ -248,67 +305,11 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Position checkpoint :";
             // 
-            // textBox2
-            // 
-            this.textBox2.AcceptsTab = true;
-            this.textBox2.Location = new System.Drawing.Point(155, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(24, 20);
-            this.textBox2.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AcceptsTab = true;
-            this.textBox1.Location = new System.Drawing.Point(155, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(24, 20);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox7
-            // 
-            this.textBox7.AcceptsTab = true;
-            this.textBox7.Location = new System.Drawing.Point(155, 181);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(24, 20);
-            this.textBox7.TabIndex = 24;
-            // 
-            // textBox6
-            // 
-            this.textBox6.AcceptsTab = true;
-            this.textBox6.Location = new System.Drawing.Point(155, 144);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(24, 20);
-            this.textBox6.TabIndex = 23;
-            // 
-            // textBox5
-            // 
-            this.textBox5.AcceptsTab = true;
-            this.textBox5.Location = new System.Drawing.Point(155, 104);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(24, 20);
-            this.textBox5.TabIndex = 22;
-            // 
-            // textBox4
-            // 
-            this.textBox4.AcceptsTab = true;
-            this.textBox4.Location = new System.Drawing.Point(155, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(24, 20);
-            this.textBox4.TabIndex = 21;
-            // 
-            // textBox3
-            // 
-            this.textBox3.AcceptsTab = true;
-            this.textBox3.Location = new System.Drawing.Point(155, 28);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(24, 20);
-            this.textBox3.TabIndex = 20;
-            // 
             // Formulaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 566);
+            this.ClientSize = new System.Drawing.Size(1370, 566);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.textBoxPositionArrivee);
             this.Controls.Add(this.textBoxPositionDepart);
