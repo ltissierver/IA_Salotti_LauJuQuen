@@ -20,7 +20,9 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public override double CalculeHCost()
         {
-            throw new NotImplementedException();
+            double cout = 0;
+           
+            return cout;
         }
 
         public override bool EndState()
@@ -36,16 +38,48 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public override List<GenericNode> GetListSucc()
         {
             List<GenericNode> lsucc = new List<GenericNode>();
+            
             // Regarder à droite
-            if ( Form1.matrice[x,y+1] == 1)
+            if ( y+1 < 20 && Formulaire.matrice[x,y+1] == 1)
             {
                 lsucc.Add(new Node(x, y + 1));
             }
             // Regarder à Gauche
+            if (y-1 > -1 && Formulaire.matrice[x, y - 1] == 1)
+            {
+                lsucc.Add(new Node(x, y-1));
+            }
             // Regarder en haut
-            // Regarder à gauche
-            // Regarder en diagonale
-            throw new NotImplementedException();
+            if (x-1 > -1  && Formulaire.matrice[x-1, y ] == 1)
+            {
+                lsucc.Add(new Node(x-1, y));
+            }
+            // Regarder en Bas
+            if (x+1 < 20 && Formulaire.matrice[x+1, y ] == 1)
+            {
+                lsucc.Add(new Node(x+1, y));
+            }
+            // Regarder en diagonale haut gauche
+            if (x - 1 >-1 && y-1 > -1 && Formulaire.matrice[x - 1, y - 1] == 1)
+            {
+                lsucc.Add(new Node(x - 1, y - 1));
+            }
+            // Regarder en diagonale haut droit
+            if (x - 1 > -1 && y + 1 < 20 && Formulaire.matrice[x - 1, y + 1] == 1)
+            {
+                lsucc.Add(new Node(x - 1, y + 1));
+            }
+            // Regarder en diagonale Bas gauche
+            if (x + 1 < 20 && y - 1 > -1 && Formulaire.matrice[x + 1, y - 1] == 1)
+            {
+                lsucc.Add(new Node(x + 1, y - 1));
+            }
+            // Regarder en diagonale Bas droit
+            if (x + 1 < 20 && y + 1 < 20 && Formulaire.matrice[x + 1, y + 1] == 1)
+            {
+                lsucc.Add(new Node(x + 1, y + 1));
+            }
+            return lsucc;
         }
 
         public override bool IsEqual(GenericNode N2)
