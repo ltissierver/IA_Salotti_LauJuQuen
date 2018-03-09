@@ -82,6 +82,7 @@
             // 
             // textBoxPositionDepart
             // 
+            this.textBoxPositionDepart.AcceptsTab = true;
             this.textBoxPositionDepart.Location = new System.Drawing.Point(870, 78);
             this.textBoxPositionDepart.Name = "textBoxPositionDepart";
             this.textBoxPositionDepart.Size = new System.Drawing.Size(100, 20);
@@ -89,6 +90,7 @@
             // 
             // textBoxPositionArrivee
             // 
+            this.textBoxPositionArrivee.AcceptsTab = true;
             this.textBoxPositionArrivee.Location = new System.Drawing.Point(870, 118);
             this.textBoxPositionArrivee.Name = "textBoxPositionArrivee";
             this.textBoxPositionArrivee.Size = new System.Drawing.Size(100, 20);
@@ -136,6 +138,7 @@
             // 
             // textBoxCheckpoint1
             // 
+            this.textBoxCheckpoint1.AcceptsTab = true;
             this.textBoxCheckpoint1.Location = new System.Drawing.Point(113, 68);
             this.textBoxCheckpoint1.Name = "textBoxCheckpoint1";
             this.textBoxCheckpoint1.Size = new System.Drawing.Size(100, 20);
@@ -143,6 +146,7 @@
             // 
             // textBoxDepartCheckpoint
             // 
+            this.textBoxDepartCheckpoint.AcceptsTab = true;
             this.textBoxDepartCheckpoint.Location = new System.Drawing.Point(113, 28);
             this.textBoxDepartCheckpoint.Name = "textBoxDepartCheckpoint";
             this.textBoxDepartCheckpoint.Size = new System.Drawing.Size(100, 20);
@@ -168,6 +172,7 @@
             // 
             // textBoxCheckpoint3
             // 
+            this.textBoxCheckpoint3.AcceptsTab = true;
             this.textBoxCheckpoint3.Location = new System.Drawing.Point(113, 144);
             this.textBoxCheckpoint3.Name = "textBoxCheckpoint3";
             this.textBoxCheckpoint3.Size = new System.Drawing.Size(100, 20);
@@ -175,6 +180,7 @@
             // 
             // textBoxCheckpoint2
             // 
+            this.textBoxCheckpoint2.AcceptsTab = true;
             this.textBoxCheckpoint2.Location = new System.Drawing.Point(113, 104);
             this.textBoxCheckpoint2.Name = "textBoxCheckpoint2";
             this.textBoxCheckpoint2.Size = new System.Drawing.Size(100, 20);
@@ -200,6 +206,7 @@
             // 
             // textBoxCheckpoint4
             // 
+            this.textBoxCheckpoint4.AcceptsTab = true;
             this.textBoxCheckpoint4.Location = new System.Drawing.Point(113, 181);
             this.textBoxCheckpoint4.Name = "textBoxCheckpoint4";
             this.textBoxCheckpoint4.Size = new System.Drawing.Size(100, 20);
