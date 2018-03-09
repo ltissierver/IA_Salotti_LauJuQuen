@@ -315,5 +315,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             matrice[18,11] = 0;
 
         }
+
+        private void textBoxPositionArrivee_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
