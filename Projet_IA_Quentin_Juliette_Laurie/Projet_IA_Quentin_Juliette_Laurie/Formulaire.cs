@@ -16,6 +16,13 @@ namespace Projet_IA_Quentin_Juliette_Laurie
     {
 
         public static int[,] matrice = new int[20,20];
+        public static int celluleDepart;
+        public static int celluleArrivee;
+        public static int celluleDepartCheck;
+        public static int check1;
+        public static int check2;
+        public static int check3;
+        public static int check4;
         public Formulaire()
         {
             InitializeComponent();
@@ -78,22 +85,25 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             //vérifier valeurs remplies
             if (textBoxPositionDepart.Text=="" || textBoxPositionArrivee.Text=="")
             {
+                MessageBox.Show("Entrez 2 nombres dont les 2 chiffres sont respectivement la colonne puis la ligne.");
                 return;
             }
-            int celluleDepart;
-            if (int.TryParse(textBoxPositionDepart.Text, out celluleDepart)
-{
-                
-            }
-            else
-            {
-                MessageBox.Show("Hey, we need an int over here.");
+            if (!int.TryParse(textBoxPositionDepart.Text, out celluleDepart))
+            { 
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
                 return;
             }
-
-            if (dansLaGrille(celluleDepart))
+            if (!int.TryParse(textBoxPositionArrivee.Text, out celluleArrivee))
             {
-                ;
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            celluleArrivee -= 11;
+            celluleDepart -= 11;
+            if (!dansLaGrille(celluleDepart) || !dansLaGrille(celluleArrivee))
+            {
+                MessageBox.Show("Entrez un nombre valable : pas hors limite et pas sur un obstacle");
+                return;
             }
             //montrer différents chemins ?
             //montrer chemin fini
@@ -102,13 +112,61 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         private void buttonCheckpoint_Click(object sender, EventArgs e)
         {
             //vérifier valeurs remplies
+            if (textBoxDepartCheckpoint.Text == "" || textBoxCheckpoint1.Text == "" || textBoxCheckpoint2.Text == "" || textBoxCheckpoint3.Text == "" || textBoxCheckpoint4.Text == "")
+            {
+                MessageBox.Show("Entrez 2 nombres dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            if (!int.TryParse(textBoxDepartCheckpoint.Text, out celluleDepartCheck))
+            {
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            if (!int.TryParse(textBoxCheckpoint1.Text, out check1))
+            {
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            if (!int.TryParse(textBoxCheckpoint2.Text, out check2))
+            {
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            if (!int.TryParse(textBoxCheckpoint3.Text, out check3))
+            {
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            if (!int.TryParse(textBoxCheckpoint4.Text, out check4))
+            {
+                MessageBox.Show("Entrez un nombre dont les 2 chiffres sont respectivement la colonne puis la ligne.");
+                return;
+            }
+            celluleDepartCheck -= 11;
+            check1 -=11;
+            check2 -=11;
+            check3 -=11;
+            check4 -=11;
+            if (!dansLaGrille(celluleDepartCheck) || !dansLaGrille(check1) || !dansLaGrille(check2) || !dansLaGrille(check3) || !dansLaGrille(check4))
+            {
+                MessageBox.Show("Entrez un nombre valable : pas hors limite et pas sur un obstacle");
+                return;
+            }
+            
             //montrer différents chemins ?
             //montrer chemin fini
         }
 
         public bool dansLaGrille(int cellule)
         {
-
+            double salut = cellule / 10;
+            int i=(int)(Math.Truncate(salut));
+            int j = cellule % 10;
+            dataGridView.Rows[i].Cells[j].Style.BackColor = Color.Red;
+            if (i >= 20 || j >= 20 || i < 0 || j < 0)
+                return false;
+            if (matrice[i,j] == 0)
+                return false;
             return true;
         }
 
