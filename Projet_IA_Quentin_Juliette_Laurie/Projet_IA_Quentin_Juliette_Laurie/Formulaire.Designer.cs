@@ -36,17 +36,17 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxCheckpoint1 = new System.Windows.Forms.TextBox();
-            this.textBoxDepartCheckpoint = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonCheckpoint = new System.Windows.Forms.Button();
+            this.textBoxCheckpoint4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBoxCheckpoint3 = new System.Windows.Forms.TextBox();
             this.textBoxCheckpoint2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxCheckpoint4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.buttonCheckpoint = new System.Windows.Forms.Button();
+            this.textBoxCheckpoint1 = new System.Windows.Forms.TextBox();
+            this.textBoxDepartCheckpoint = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,6 +99,9 @@
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToResizeColumns = false;
+            this.dataGridView.AllowUserToResizeRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(41, 55);
             this.dataGridView.Name = "dataGridView";
@@ -136,39 +139,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Parcours à checkpoint";
             // 
-            // textBoxCheckpoint1
+            // buttonCheckpoint
             // 
-            this.textBoxCheckpoint1.AcceptsTab = true;
-            this.textBoxCheckpoint1.Location = new System.Drawing.Point(113, 68);
-            this.textBoxCheckpoint1.Name = "textBoxCheckpoint1";
-            this.textBoxCheckpoint1.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCheckpoint1.TabIndex = 13;
+            this.buttonCheckpoint.Location = new System.Drawing.Point(293, 92);
+            this.buttonCheckpoint.Name = "buttonCheckpoint";
+            this.buttonCheckpoint.Size = new System.Drawing.Size(150, 46);
+            this.buttonCheckpoint.TabIndex = 1;
+            this.buttonCheckpoint.Text = "Chercher le chemin";
+            this.buttonCheckpoint.UseVisualStyleBackColor = true;
+            this.buttonCheckpoint.Click += new System.EventHandler(this.buttonCheckpoint_Click);
             // 
-            // textBoxDepartCheckpoint
+            // textBoxCheckpoint4
             // 
-            this.textBoxDepartCheckpoint.AcceptsTab = true;
-            this.textBoxDepartCheckpoint.Location = new System.Drawing.Point(113, 28);
-            this.textBoxDepartCheckpoint.Name = "textBoxDepartCheckpoint";
-            this.textBoxDepartCheckpoint.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDepartCheckpoint.TabIndex = 12;
+            this.textBoxCheckpoint4.AcceptsTab = true;
+            this.textBoxCheckpoint4.Location = new System.Drawing.Point(113, 181);
+            this.textBoxCheckpoint4.Name = "textBoxCheckpoint4";
+            this.textBoxCheckpoint4.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCheckpoint4.TabIndex = 19;
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Position checkpoint :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Position de départ :";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Position checkpoint :";
             // 
             // textBoxCheckpoint3
             // 
@@ -204,32 +200,39 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Position checkpoint :";
             // 
-            // textBoxCheckpoint4
+            // textBoxCheckpoint1
             // 
-            this.textBoxCheckpoint4.AcceptsTab = true;
-            this.textBoxCheckpoint4.Location = new System.Drawing.Point(113, 181);
-            this.textBoxCheckpoint4.Name = "textBoxCheckpoint4";
-            this.textBoxCheckpoint4.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCheckpoint4.TabIndex = 19;
+            this.textBoxCheckpoint1.AcceptsTab = true;
+            this.textBoxCheckpoint1.Location = new System.Drawing.Point(113, 68);
+            this.textBoxCheckpoint1.Name = "textBoxCheckpoint1";
+            this.textBoxCheckpoint1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCheckpoint1.TabIndex = 13;
             // 
-            // label5
+            // textBoxDepartCheckpoint
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Position checkpoint :";
+            this.textBoxDepartCheckpoint.AcceptsTab = true;
+            this.textBoxDepartCheckpoint.Location = new System.Drawing.Point(113, 28);
+            this.textBoxDepartCheckpoint.Name = "textBoxDepartCheckpoint";
+            this.textBoxDepartCheckpoint.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDepartCheckpoint.TabIndex = 12;
             // 
-            // buttonCheckpoint
+            // label2
             // 
-            this.buttonCheckpoint.Location = new System.Drawing.Point(293, 92);
-            this.buttonCheckpoint.Name = "buttonCheckpoint";
-            this.buttonCheckpoint.Size = new System.Drawing.Size(150, 46);
-            this.buttonCheckpoint.TabIndex = 1;
-            this.buttonCheckpoint.Text = "Chercher le chemin";
-            this.buttonCheckpoint.UseVisualStyleBackColor = true;
-            this.buttonCheckpoint.Click += new System.EventHandler(this.buttonCheckpoint_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Position de départ :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Position checkpoint :";
             // 
             // Formulaire
             // 

@@ -21,8 +21,25 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public override double CalculeHCost()
         {
             double cout = 0;
-           
+            /*
+             int ecartX = xfinal - x;
+             int ecartY = yfinal -y;
+             min =  minimum(ecartX,ecartY)
+             cout += sqrt(2) *min;
+             ecartX += min;
+             ecartY += min;
+
+            cout += ecartX + ecartY; // sachant que u  des deux écarts = 0 
+
+            */
+
             return cout;
+        }
+
+        public double minimum (double nbr1, double nbr2)
+        {
+            if (nbr1 < nbr2) return nbr1;
+            else return nbr2;
         }
 
         public override bool EndState()
