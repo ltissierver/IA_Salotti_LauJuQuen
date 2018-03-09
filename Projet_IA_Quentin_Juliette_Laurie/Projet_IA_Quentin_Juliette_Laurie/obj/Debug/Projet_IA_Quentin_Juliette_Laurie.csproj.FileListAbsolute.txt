@@ -17,3 +17,6 @@ C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliet
 C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\obj\Debug\Projet_IA_Quentin_Juliette_Laurie.csproj.GenerateResource.Cache
 C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.exe
 C:\Users\Juliette\Desktop\Cours\IA\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.pdb
+C:\Users\Dell\Quentin\ENSC\Info\IA\Salotti\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\bin\Debug\Projet_IA_Quentin_Juliette_Laurie.exe.config
+C:\Users\Dell\Quentin\ENSC\Info\IA\Salotti\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\obj\Debug\Projet_IA_Quentin_Juliette_Laurie.exe
+C:\Users\Dell\Quentin\ENSC\Info\IA\Salotti\IA_Salotti_LauJuQuen\Projet_IA_Quentin_Juliette_Laurie\Projet_IA_Quentin_Juliette_Laurie\obj\Debug\Projet_IA_Quentin_Juliette_Laurie.pdb
