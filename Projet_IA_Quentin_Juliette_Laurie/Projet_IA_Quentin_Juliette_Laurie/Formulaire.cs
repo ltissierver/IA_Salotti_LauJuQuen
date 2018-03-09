@@ -124,6 +124,19 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             //changer les valeurs
             matrice[celluleDepart[0],celluleDepart[1]] = 2;
             matrice[celluleArrivee[0], celluleArrivee[1]] = 4;
+            //trouver les chemins
+            //  1. donner les valeurs aux noeuds correspondant au noeud final
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    // convertir le point de la matrice en node matrice[i,j]
+                    // calculer son cout
+                    // node.CalculeHCost()
+                }
+            }
+
+
             //montrer différents chemins ?
             //montrer chemin fini
             coloriageGraphique();
