@@ -17,7 +17,6 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             this.y = y;
         }
         
-
         public override double CalculeHCost()
         {
             double cout = 0;
@@ -58,27 +57,27 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             List<GenericNode> lsucc = new List<GenericNode>();
             
             // Regarder à droite
-            if ( y+1 < 20 && Formulaire.matrice[x,y+1] == 1)
+            if (y + 1 < 20 && Formulaire.matrice[x, y + 1] == 1)
             {
                 lsucc.Add(new Node(x, y + 1));
             }
             // Regarder à Gauche
-            if (y-1 > -1 && Formulaire.matrice[x, y - 1] == 1)
+            if (y - 1 > -1 && Formulaire.matrice[x, y - 1] == 1)
             {
                 lsucc.Add(new Node(x, y-1));
             }
             // Regarder en haut
-            if (x-1 > -1  && Formulaire.matrice[x-1, y ] == 1)
+            if (x - 1 > -1  && Formulaire.matrice[x - 1, y ] == 1)
             {
                 lsucc.Add(new Node(x-1, y));
             }
             // Regarder en Bas
-            if (x+1 < 20 && Formulaire.matrice[x+1, y ] == 1)
+            if (x + 1 < 20 && Formulaire.matrice[x + 1, y ] == 1)
             {
-                lsucc.Add(new Node(x+1, y));
+                lsucc.Add(new Node(x + 1, y));
             }
             // Regarder en diagonale haut gauche
-            if (x - 1 >-1 && y-1 > -1 && Formulaire.matrice[x - 1, y - 1] == 1)
+            if (x - 1 > -1 && y - 1 > -1 && Formulaire.matrice[x - 1, y - 1] == 1)
             {
                 lsucc.Add(new Node(x - 1, y - 1));
             }
