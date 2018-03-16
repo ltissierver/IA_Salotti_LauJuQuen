@@ -44,7 +44,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public override bool EndState()
         {
-            bool testPosition = this.x == Formulaire.celluleArrivee[0] && this.y == Formulaire.celluleArrivee[1]);
+            bool testPosition = this.x == Formulaire.celluleArrivee[0] && this.y == Formulaire.celluleArrivee[1];
             return (testPosition && Formulaire.CheckPoint1 && Formulaire.CheckPoint2 && Formulaire.CheckPoint3 && Formulaire.CheckPoint4);
         }
 
