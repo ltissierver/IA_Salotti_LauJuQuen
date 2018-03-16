@@ -12,13 +12,29 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public int y; // Colonnes
 
         //A Mettre dans la grille avec la fonction
-        public List<String> checkPointVisite = new List<String>();
+        public static bool CheckPoint1 = false;
+        public static bool CheckPoint2 = false;
+        public static bool CheckPoint3 = false;
+        public static bool CheckPoint4 = false;
 
         public void pointVisite(int x, int y)
         {
-
+            if (x== Formulaire.check1[0] && y == Formulaire.check1[1])
+            {
+                CheckPoint1 = true;
+            }
+            else if (x == Formulaire.check2[0] && y == Formulaire.check2[1])
+            {
+                CheckPoint2 = true;
+            }else if (x == Formulaire.check3[0] && y == Formulaire.check3[1])
+            {
+                CheckPoint3 = true;
+            }
+            else if (x == Formulaire.check4[0] && y == Formulaire.check4[1])
+            {
+                CheckPoint4 = true;
+            }
         }
-    
 
         public Node4(int x, int y)
         {
