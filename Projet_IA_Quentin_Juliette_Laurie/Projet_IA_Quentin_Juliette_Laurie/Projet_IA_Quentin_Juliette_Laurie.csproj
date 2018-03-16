@@ -57,6 +57,7 @@
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
     <EmbeddedResource Include="Formulaire.resx">
       <DependentUpon>Formulaire.cs</DependentUpon>
     </EmbeddedResource>

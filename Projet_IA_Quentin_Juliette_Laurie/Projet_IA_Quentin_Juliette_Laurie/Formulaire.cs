@@ -128,30 +128,21 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             //changer les valeurs
             matrice[celluleDepart[0],celluleDepart[1]] = 2;
             matrice[celluleArrivee[0], celluleArrivee[1]] = 4;
-            //trouver les chemins
-            //  1. donner les valeurs aux noeuds correspondant au noeud final
-            for (int i = 0; i < 20; i++)
-            {
-                for (int j = 0; j < 20; j++)
-                {
-                    // convertir le point de la matrice en node matrice[i,j]
-                    // calculer son cout
-                    foreach (Node node in graph.L_Ouverts)
-                    {
-                        node.CalculeHCost();
-                    }
-                }
-            }
             //appliquer l'algo
-            List<GenericNode> solution= graph.RechercheSolutionAEtoile(new Node(celluleDepart[0], celluleDepart[1]));
+            List<GenericNode> solution = graph.RechercheSolutionAEtoile(new Node(celluleDepart[0], celluleDepart[1]));
             foreach(GenericNode n in solution)
             {
                 Node node = (Node)n;
-                matrice[node.x, node.y] = 5;
+                if ((node.x == celluleDepart[0] && node.y == celluleDepart[1]) || (node.x == celluleArrivee[0] && node.y == celluleArrivee[1]))
+                    ;
+                else
+                    matrice[node.x, node.y] = 5;
             }
+
+            graph.GetSearchTree(treeView1);
+
             //montrer chemin fini
             coloriageGraphique();
-            textBox2.Text = solution.Count.ToString();
         }
 
         private void buttonCheckpoint_Click(object sender, EventArgs e)
@@ -345,6 +336,41 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         }
 
         private void textBoxPositionArrivee_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
         }
