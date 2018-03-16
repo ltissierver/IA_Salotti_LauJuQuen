@@ -17,27 +17,19 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             this.y = y;
         }
         
-
         public override double CalculeHCost()
         {
-            double cout = 0;
-            
+             double cout = 0;
              int ecartX = Math.Abs(Formulaire.celluleArrivee[0] - x);
              int ecartY = Math.Abs(Formulaire.celluleArrivee[1] - y);
-             int min = minimum(ecartX, ecartY);
+             int min = Math.Min(ecartX, ecartY);
              cout += Math.Sqrt(2) * min;
              ecartX -= min;
              ecartY -= min;
 
-            cout += ecartX + ecartY; // sachant que un des deux écarts = 0 
+            cout += ecartX + ecartY; // sachant que un des deux écarts = 0
 
             return cout;
-        }
-
-        public int minimum (int nbr1, int nbr2)
-        {
-            if (nbr1 < nbr2) return nbr1;
-            else return nbr2;
         }
 
         public override bool EndState()
@@ -49,11 +41,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         {
             double distance = Math.Sqrt(2);
             Node N2 = (Node)N;
-            if ((this.x == N2.x + 1 || this.x == N2.x - 1) && this.y == N2.y)
+            if ((N2.x == this.x + 1 || N2.x == this.x - 1) && N2.y == this.y)
             {
                 distance = 1;
             }
-            if ((this.y == N2.y + 1 || this.y == N2.y - 1) && this.x == N2.x)
+            if ((N2.y == this.y + 1 || N2.y == this.y - 1) && N2.x == this.x)
             {
                 distance = 1;
             }
@@ -82,7 +74,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             // Regarder en Bas
             if (x+1 < 20 && (Formulaire.matrice[x+1, y ] == 1 || Formulaire.matrice[x + 1, y] == 3 || Formulaire.matrice[x + 1, y] == 4))
             {
-                lsucc.Add(new Node(x+1, y));
+                lsucc.Add(new Node(x + 1, y));
             }
             // Regarder en diagonale haut gauche
             if (x - 1 >-1 && y-1 > -1 && (Formulaire.matrice[x - 1, y - 1] == 1 || Formulaire.matrice[x - 1, y - 1] == 3 || Formulaire.matrice[x - 1, y - 1] == 4))
