@@ -9,7 +9,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
     // pour résoudre un problème particulier en y ajoutant des infos liées au contexte du problème
     abstract public class GenericNode
     {
-       // protected string Name;              // DOIT ETRE UNIQUE POUR CHAQUE genericnode !!
+        // protected string Name;              // DOIT ETRE UNIQUE POUR CHAQUE genericnode !!
         protected double GCost;               //coût du chemin du noeud initial jusqu'à ce noeud
         protected double HCost;               //estimation heuristique du coût pour atteindre le noeud final
         protected double TotalCost;           //coût total (g+h)
@@ -43,7 +43,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return HCost;
         }
 
-        
+
 
 
         public double Cout_Total
@@ -70,8 +70,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public void Supprime_Liens_Parent()
         {
-            if (ParentNode == null)
-                return;
+            if (ParentNode == null) return;
             ParentNode.Enfants.Remove(this);
             ParentNode = null;
         }
@@ -81,7 +80,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             TotalCost = GCost + HCost;
         }
 
-  
+
 
         // Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
         public abstract bool IsEqual(GenericNode N2);

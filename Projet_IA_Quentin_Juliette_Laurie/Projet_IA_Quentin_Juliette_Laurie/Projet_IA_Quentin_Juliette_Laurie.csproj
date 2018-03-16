@@ -55,6 +55,7 @@
     <Compile Include="GenericNode.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="Node.cs" />
+    <Compile Include="Node4.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulaire.resx">

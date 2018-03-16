@@ -26,7 +26,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
             while (i < L_Fermes.Count)
             {
-                if (L_Fermes[i].IsEqual (N2))
+                if (L_Fermes[i].IsEqual(N2))
                     return L_Fermes[i];
                 i++;
             }
@@ -47,10 +47,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         }
 
         /// <summary>
-        /// retourne la liste des nodes qu'il faut suivre à partir du début
+        /// retourne le chemin le plus court en liste de genericNode
         /// </summary>
-        /// <param name="N0"></param>
-        /// <returns></returns>
+        /// <param name="N0">noeud de départ</param>
+        /// <returns>liste solution</returns>
         public List<GenericNode> RechercheSolutionAEtoile(GenericNode N0)
         {
             L_Ouverts = new List<GenericNode>();
@@ -101,10 +101,6 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return _LN;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="N"></param>
         private void MAJSuccesseurs(GenericNode N)
         {
             // On fait appel à GetListSucc, méthode abstraite qu'on doit réécrire pour chaque
@@ -129,7 +125,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                             // HCost pas recalculé car toujours bon
                             N2bis.calculCoutTotal(); // somme de GCost et HCost
                             // Mise à jour de la famille ....
-                            N2bis.Supprime_Liens_Parent ();
+                            N2bis.Supprime_Liens_Parent();
                             N2bis.SetNoeud_Parent(N);
                             // Mise à jour des ouverts
                             L_Ouverts.Remove(N2bis);
@@ -141,7 +137,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                     {
                         // N2 est nouveau, MAJ et insertion dans les ouverts
                         N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-                        N2.SetHCost ( N2.CalculeHCost()) ;
+                        N2.SetHCost(N2.CalculeHCost());
                         N2.SetNoeud_Parent(N);
                         N2.calculCoutTotal(); // somme de GCost et HCost
                         this.InsertNewNodeInOpenList(N2);
@@ -185,30 +181,30 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         // Si on veut afficher l'arbre de recherche, il suffit de passer un treeview en paramètres
         // Celui-ci est mis à jour avec les noeuds de la liste des fermés, on ne tient pas compte des ouverts
-        public void GetSearchTree( TreeView TV )
+        public void GetSearchTree(TreeView TV)
         {
             if (L_Fermes == null) return;
             if (L_Fermes.Count == 0) return;
-            
+
             // On suppose le TreeView préexistant
             TV.Nodes.Clear();
 
-            TreeNode TN = new TreeNode ( L_Fermes[0].ToString() );
+            TreeNode TN = new TreeNode(L_Fermes[0].ToString());
             TV.Nodes.Add(TN);
 
-            AjouteBranche ( L_Fermes[0], TN );
+            AjouteBranche(L_Fermes[0], TN);
         }
 
         // AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
-        private void AjouteBranche( GenericNode GN, TreeNode TN)
+        private void AjouteBranche(GenericNode GN, TreeNode TN)
         {
             foreach (GenericNode GNfils in GN.GetEnfants())
             {
                 TreeNode TNfils = new TreeNode(GNfils.ToString());
                 TN.Nodes.Add(TNfils);
-                if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils); 
+                if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils);
             }
         }
-  
+
     }
 }
