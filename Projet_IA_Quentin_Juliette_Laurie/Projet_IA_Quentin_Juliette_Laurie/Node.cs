@@ -22,24 +22,16 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         {
             double cout = 0;
             
-             int ecartX = Formulaire.celluleArrivee[0] - x;
-             int ecartY = Formulaire.celluleArrivee[1] - y;
-             int min = minimum(ecartX, ecartY);
-             cout += Math.Sqrt(2) * min;
-             ecartX += min;
-             ecartY += min;
+            int ecartX = Formulaire.celluleArrivee[0] - x;
+            int ecartY = Formulaire.celluleArrivee[1] - y;
+            int min = Math.Min(ecartX, ecartY);
+            cout += Math.Sqrt(2) * min;
+            ecartX += min;
+            ecartY += min;
 
-            cout += ecartX + ecartY; // sachant que u  des deux écarts = 0 
-
-            
+            cout += ecartX + ecartY; // sachant que un des deux écarts = 0
 
             return cout;
-        }
-
-        public int minimum (int nbr1, int nbr2)
-        {
-            if (nbr1 < nbr2) return nbr1;
-            else return nbr2;
         }
 
         public override bool EndState()
@@ -51,11 +43,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         {
             double distance = Math.Sqrt(2);
             Node N2 = (Node)N;
-            if ((this.x == N2.x + 1 || this.x == N2.x - 1) && this.y == N2.y)
+            if ((N2.x == this.x + 1 || N2.x == this.x - 1) && N2.y == this.y)
             {
                 distance = 1;
             }
-            if ((this.y == N2.y + 1 || this.y == N2.y - 1) && this.x == N2.x)
+            if ((N2.y == this.y + 1 || N2.y == this.y - 1) && N2.x == this.x)
             {
                 distance = 1;
             }
