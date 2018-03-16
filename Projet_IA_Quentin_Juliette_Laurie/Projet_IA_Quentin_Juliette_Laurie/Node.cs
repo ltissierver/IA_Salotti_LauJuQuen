@@ -65,42 +65,42 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             List<GenericNode> lsucc = new List<GenericNode>();
             
             // Regarder à droite
-            if ( y+1 < 20 && Formulaire.matrice[x,y+1] == 1)
+            if ( y+1 < 20 && (Formulaire.matrice[x,y+1] == 1 || Formulaire.matrice[x, y + 1] == 3 || Formulaire.matrice[x, y + 1] == 4))
             {
                 lsucc.Add(new Node(x, y + 1));
             }
             // Regarder à Gauche
-            if (y-1 > -1 && Formulaire.matrice[x, y - 1] == 1)
+            if (y-1 > -1 && (Formulaire.matrice[x, y - 1] == 1 || Formulaire.matrice[x, y - 1] == 3 || Formulaire.matrice[x, y - 1] == 4))
             {
                 lsucc.Add(new Node(x, y-1));
             }
             // Regarder en haut
-            if (x-1 > -1  && Formulaire.matrice[x-1, y ] == 1)
+            if (x-1 > -1  && (Formulaire.matrice[x-1, y ] == 1 || Formulaire.matrice[x - 1, y] == 3 || Formulaire.matrice[x - 1, y] == 4))
             {
                 lsucc.Add(new Node(x-1, y));
             }
             // Regarder en Bas
-            if (x+1 < 20 && Formulaire.matrice[x+1, y ] == 1)
+            if (x+1 < 20 && (Formulaire.matrice[x+1, y ] == 1 || Formulaire.matrice[x + 1, y] == 3 || Formulaire.matrice[x + 1, y] == 4))
             {
                 lsucc.Add(new Node(x+1, y));
             }
             // Regarder en diagonale haut gauche
-            if (x - 1 >-1 && y-1 > -1 && Formulaire.matrice[x - 1, y - 1] == 1)
+            if (x - 1 >-1 && y-1 > -1 && (Formulaire.matrice[x - 1, y - 1] == 1 || Formulaire.matrice[x - 1, y - 1] == 3 || Formulaire.matrice[x - 1, y - 1] == 4))
             {
                 lsucc.Add(new Node(x - 1, y - 1));
             }
             // Regarder en diagonale haut droit
-            if (x - 1 > -1 && y + 1 < 20 && Formulaire.matrice[x - 1, y + 1] == 1)
+            if (x - 1 > -1 && y + 1 < 20 && (Formulaire.matrice[x - 1, y - 1] == 1 || Formulaire.matrice[x - 1, y - 1] == 3 || Formulaire.matrice[x - 1, y - 1] == 4))
             {
                 lsucc.Add(new Node(x - 1, y + 1));
             }
             // Regarder en diagonale Bas gauche
-            if (x + 1 < 20 && y - 1 > -1 && Formulaire.matrice[x + 1, y - 1] == 1)
+            if (x + 1 < 20 && y - 1 > -1 && (Formulaire.matrice[x + 1, y - 1] == 1 || Formulaire.matrice[x + 1, y - 1] == 3 || Formulaire.matrice[x + 1, y - 1] == 4))
             {
                 lsucc.Add(new Node(x + 1, y - 1));
             }
             // Regarder en diagonale Bas droit
-            if (x + 1 < 20 && y + 1 < 20 && Formulaire.matrice[x + 1, y + 1] == 1)
+            if (x + 1 < 20 && y + 1 < 20 && (Formulaire.matrice[x + 1, y + 1] == 1 || Formulaire.matrice[x + 1, y + 1] == 3 || Formulaire.matrice[x + 1, y + 1] == 4))
             {
                 lsucc.Add(new Node(x + 1, y + 1));
             }
@@ -111,6 +111,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         {
             Node N2 = (Node)N;
             return (this.x == N2.x && this.y == N2.y);
+        }
+        public override string ToString()
+        {
+            return (x+1)+" "+(y+1);
         }
     }
 }

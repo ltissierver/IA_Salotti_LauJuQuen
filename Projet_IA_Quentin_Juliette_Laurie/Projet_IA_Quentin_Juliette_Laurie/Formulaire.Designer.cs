@@ -54,9 +54,18 @@
             this.textBoxDepartCheckpoint = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.ligne = new System.Windows.Forms.Label();
+            this.colonne = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BoutonChemin
@@ -111,7 +120,7 @@
             this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(41, 55);
+            this.dataGridView.Location = new System.Drawing.Point(23, 20);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 20;
             this.dataGridView.Size = new System.Drawing.Size(674, 484);
@@ -136,6 +145,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(24, 20);
             this.textBox2.TabIndex = 11;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -144,6 +154,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(24, 20);
             this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox2
             // 
@@ -177,6 +188,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(24, 20);
             this.textBox7.TabIndex = 24;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox6
             // 
@@ -185,6 +197,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(24, 20);
             this.textBox6.TabIndex = 23;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox5
             // 
@@ -193,6 +206,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(24, 20);
             this.textBox5.TabIndex = 22;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -201,6 +215,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(24, 20);
             this.textBox4.TabIndex = 21;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox3
             // 
@@ -209,6 +224,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(24, 20);
             this.textBox3.TabIndex = 20;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // buttonCheckpoint
             // 
@@ -305,12 +321,71 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Position checkpoint :";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(739, 559);
+            this.tabControl1.TabIndex = 10;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridView);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(731, 533);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Grille";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.treeView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(731, 533);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "TreeView";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(28, 21);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(674, 490);
+            this.treeView1.TabIndex = 0;
+            // 
+            // ligne
+            // 
+            this.ligne.AutoSize = true;
+            this.ligne.Location = new System.Drawing.Point(867, 39);
+            this.ligne.Name = "ligne";
+            this.ligne.Size = new System.Drawing.Size(33, 13);
+            this.ligne.TabIndex = 11;
+            this.ligne.Text = "Ligne";
+            // 
+            // colonne
+            // 
+            this.colonne.AutoSize = true;
+            this.colonne.Location = new System.Drawing.Point(910, 39);
+            this.colonne.Name = "colonne";
+            this.colonne.Size = new System.Drawing.Size(46, 13);
+            this.colonne.TabIndex = 12;
+            this.colonne.Text = "Colonne";
+            // 
             // Formulaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 566);
-            this.Controls.Add(this.dataGridView);
+            this.ClientSize = new System.Drawing.Size(1370, 585);
+            this.Controls.Add(this.colonne);
+            this.Controls.Add(this.ligne);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.textBoxPositionArrivee);
             this.Controls.Add(this.textBoxPositionDepart);
             this.Controls.Add(this.labelPositionArrivee);
@@ -324,6 +399,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +435,11 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Label ligne;
+        private System.Windows.Forms.Label colonne;
     }
 }
