@@ -24,6 +24,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public static int[] check3 = new int[2];
         public static int[] check4 = new int[2];
 
+        public static bool CheckPoint1 = false;
+        public static bool CheckPoint2 = false;
+        public static bool CheckPoint3 = false;
+        public static bool CheckPoint4 = false;
+
         private Graph graph;
 
         public Formulaire()
