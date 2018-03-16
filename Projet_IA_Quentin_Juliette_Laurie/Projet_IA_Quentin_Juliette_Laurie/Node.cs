@@ -21,13 +21,12 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public override double CalculeHCost()
         {
             double cout = 0;
-            
-            int ecartX = Formulaire.celluleArrivee[0] - x;
-            int ecartY = Formulaire.celluleArrivee[1] - y;
-            int min = Math.Min(ecartX, ecartY);
-            cout += Math.Sqrt(2) * min;
-            ecartX += min;
-            ecartY += min;
+             int ecartX = Math.Abs(Formulaire.celluleArrivee[0] - x);
+             int ecartY = Math.Abs(Formulaire.celluleArrivee[1] - y);
+             int min = Math.Min(ecartX, ecartY);
+             cout += Math.Sqrt(2) * min;
+             ecartX -= min;
+             ecartY -= min;
 
             cout += ecartX + ecartY; // sachant que un des deux écarts = 0
 

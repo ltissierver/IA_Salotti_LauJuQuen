@@ -46,6 +46,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return null;
         }
 
+        /// <summary>
+        /// retourne la liste des nodes qu'il faut suivre à partir du début
+        /// </summary>
+        /// <param name="N0"></param>
+        /// <returns></returns>
         public List<GenericNode> RechercheSolutionAEtoile(GenericNode N0)
         {
             L_Ouverts = new List<GenericNode>();
@@ -96,6 +101,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return _LN;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="N"></param>
         private void MAJSuccesseurs(GenericNode N)
         {
             // On fait appel à GetListSucc, méthode abstraite qu'on doit réécrire pour chaque

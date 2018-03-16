@@ -70,7 +70,8 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public void Supprime_Liens_Parent()
         {
-            if (ParentNode == null) return;
+            if (ParentNode == null)
+                return;
             ParentNode.Enfants.Remove(this);
             ParentNode = null;
         }

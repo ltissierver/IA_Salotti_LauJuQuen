@@ -24,8 +24,11 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         public static int[] check3 = new int[2];
         public static int[] check4 = new int[2];
 
+        private Graph graph;
+
         public Formulaire()
         {
+            graph = new Graph();
             InitializeComponent();
             initialisationGrille();
             initialisationGraphique(3,3);
@@ -56,7 +59,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             }
         }
 
-        void coloriageGraphique()
+        private void coloriageGraphique()
         {
             //Parcourir la grille
             for (int i = 0; i < 20; i++)
@@ -125,9 +128,30 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             //changer les valeurs
             matrice[celluleDepart[0],celluleDepart[1]] = 2;
             matrice[celluleArrivee[0], celluleArrivee[1]] = 4;
-            //montrer différents chemins ?
+            //trouver les chemins
+            //  1. donner les valeurs aux noeuds correspondant au noeud final
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    // convertir le point de la matrice en node matrice[i,j]
+                    // calculer son cout
+                    foreach (Node node in graph.L_Ouverts)
+                    {
+                        node.CalculeHCost();
+                    }
+                }
+            }
+            //appliquer l'algo
+            List<GenericNode> solution= graph.RechercheSolutionAEtoile(new Node(celluleDepart[0], celluleDepart[1]));
+            foreach(GenericNode n in solution)
+            {
+                Node node = (Node)n;
+                matrice[node.x, node.y] = 5;
+            }
             //montrer chemin fini
             coloriageGraphique();
+            textBox2.Text = solution.Count.ToString();
         }
 
         private void buttonCheckpoint_Click(object sender, EventArgs e)
@@ -229,14 +253,18 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return true;
         }
 
-
+        /// <summary>
+        /// initialise la grille et la liste de noeuds ouverts
+        /// </summary>
         public void initialisationGrille()
         {
+            graph.L_Ouverts = new List<GenericNode>();
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
                 {
                     matrice[i,j] = 1;
+                    graph.L_Ouverts.Add(new Node(i, j));
                 }
             }
             for (int i = 0; i < 20; i++)
