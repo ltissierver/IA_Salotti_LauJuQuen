@@ -28,12 +28,13 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public override double CalculeHCost()
         {
-            throw new NotImplementedException();
+            return (0);
         }
 
         public override bool EndState()
         {
-            throw new NotImplementedException();
+            bool testPosition = this.x == Formulaire.celluleArrivee[0] && this.y == Formulaire.celluleArrivee[1]);
+            return (testPosition && Formulaire.CheckPoint1 && Formulaire.CheckPoint2 && Formulaire.CheckPoint3 && Formulaire.CheckPoint4);
         }
 
         public override double GetArcCost(GenericNode N)
@@ -98,9 +99,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             return lsucc;
         }
 
-        public override bool IsEqual(GenericNode N2)
+        public override bool IsEqual(GenericNode N)
         {
-            throw new NotImplementedException();
+            Node N2 = (Node)N;
+            return (this.x == N2.x && this.y == N2.y);
         }
 
         //ToString
