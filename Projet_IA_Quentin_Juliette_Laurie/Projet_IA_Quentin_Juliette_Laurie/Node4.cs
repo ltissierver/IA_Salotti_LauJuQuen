@@ -55,14 +55,14 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             double cout = 0;
             if (Formulaire.CheckPoint1 == true && Formulaire.CheckPoint2 == true && Formulaire.CheckPoint3 == true && Formulaire.CheckPoint4 == true)
             {
-                //cout = CalculeHCostLocal(Formulaire.celluleDepartCheck);
-                int ecartX = Math.Abs(Formulaire.celluleDepartCheck[0] - x);
+                cout = CalculeHCostLocal(Formulaire.celluleDepartCheck);
+                /*int ecartX = Math.Abs(Formulaire.celluleDepartCheck[0] - x);
                 int ecartY = Math.Abs(Formulaire.celluleDepartCheck[1] - y);
                 int min = Math.Min(ecartX, ecartY);
                 cout += Math.Sqrt(2) * min;
                 ecartX -= min;
                 ecartY -= min;
-                cout += ecartX + ecartY; // sachant que un des deux écarts = 0
+                cout += ecartX + ecartY; // sachant que un des deux écarts = 0*/
             }
             else
             {
@@ -81,7 +81,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                 // Puis ajouter le cout vers le point initial (= coutRetour)
                 x = mesCheck[indice - 1][0];
                 y = mesCheck[indice - 1][1];
-                double coutRetour = CalculeHCostLocal(Formulaire.celluleDepart);
+                double coutRetour = CalculeHCostLocal(Formulaire.celluleDepartCheck);
                 cout = demiCout + coutRetour;
             }
             return (cout);
@@ -89,7 +89,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
 
         public override bool EndState()
         {
-            bool testPosition = this.x == Formulaire.celluleArrivee[0] && this.y == Formulaire.celluleArrivee[1];
+            bool testPosition = this.x == Formulaire.celluleDepartCheck[0] && this.y == Formulaire.celluleDepartCheck[1];
             return (testPosition && Formulaire.CheckPoint1 && Formulaire.CheckPoint2 && Formulaire.CheckPoint3 && Formulaire.CheckPoint4);
         }
 
