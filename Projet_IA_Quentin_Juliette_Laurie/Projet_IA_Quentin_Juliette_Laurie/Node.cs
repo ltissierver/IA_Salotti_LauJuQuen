@@ -19,7 +19,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
         
         public override double CalculeHCost()
         {
-
+            return (0);
         }
 
         public override bool EndState()

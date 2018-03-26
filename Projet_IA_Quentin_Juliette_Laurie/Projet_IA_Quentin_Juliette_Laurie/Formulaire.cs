@@ -142,6 +142,10 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                     ;
                 else
                     matrice[node.x, node.y] = 5;
+                /* OU ALORS :
+                if (!(node.x == celluleDepart[0] && node.y == celluleDepart[1]) && !(node.x == celluleArrivee[0] && node.y == celluleArrivee[1]))
+                    matrice[node.x, node.y] = 5;
+                */
             }
 
             graph.GetSearchTree(treeView1);

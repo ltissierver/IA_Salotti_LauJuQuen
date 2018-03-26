@@ -37,9 +37,46 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             }
         }
 
+        public double CalculeHCostLocal(int[] cell)
+        {
+            double cout = 0;
+            int ecartX = Math.Abs(cell[0] - x);
+            int ecartY = Math.Abs(cell[0] - y);
+            int min = Math.Min(ecartX, ecartY);
+            cout += Math.Sqrt(2) * min;
+            ecartX -= min;
+            ecartY -= min;
+            cout += ecartX + ecartY; // sachant que un des deux écarts = 0
+            return cout;
+        }
+
         public override double CalculeHCost()
         {
-            return (0);
+            double cout = 0;
+            if (Formulaire.CheckPoint1 == true && Formulaire.CheckPoint2 == true && Formulaire.CheckPoint3 == true && Formulaire.CheckPoint4 == true)
+            {
+                //cout = CalculeHCostLocal(Formulaire.celluleDepartCheck);
+                int ecartX = Math.Abs(Formulaire.celluleDepartCheck[0] - x);
+                int ecartY = Math.Abs(Formulaire.celluleDepartCheck[1] - y);
+                int min = Math.Min(ecartX, ecartY);
+                cout += Math.Sqrt(2) * min;
+                ecartX -= min;
+                ecartY -= min;
+                cout += ecartX + ecartY; // sachant que un des deux écarts = 0
+            }
+            else
+            {
+                double cout1 = CalculeHCostLocal(Formulaire.check1);
+                double cout2 = CalculeHCostLocal(Formulaire.check2);
+                double cout3 = CalculeHCostLocal(Formulaire.check3);
+                double cout4 = CalculeHCostLocal(Formulaire.check4);
+                double[] maListe = new double[] { cout1, cout2, cout3, cout4 };
+                double demiCout = maListe.Max(); // Renvoie valeur du demiCout
+                // Faut savoir à quel checkPoint ça correspond (=indice liste ou valeur = demiCout)
+                // Puis ajouter le cout vers le point initial (=coutRetour)
+                // cout = demiCout + courRetour
+            }
+            return (cout);
         }
 
         public override bool EndState()
