@@ -113,22 +113,22 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             List<GenericNode> lsucc = new List<GenericNode>();
 
             // Regarder à droite
-            if (y + 1 < 20 && Formulaire.matrice[x, y + 1] == 1)
+            if (y + 1 < 20 && Formulaire.matrice[x, y + 1] != 0)
             {
                 lsucc.Add(new Node4(x, y + 1));
             }
             // Regarder à Gauche
-            if (y - 1 > -1 && Formulaire.matrice[x, y - 1] == 1)
+            if (y - 1 > -1 && Formulaire.matrice[x, y - 1] != 0)
             {
                 lsucc.Add(new Node4(x, y - 1));
             }
             // Regarder en haut
-            if (x - 1 > -1 && Formulaire.matrice[x - 1, y] == 1)
+            if (x - 1 > -1 && Formulaire.matrice[x - 1, y] != 0)
             {
                 lsucc.Add(new Node4(x - 1, y));
             }
             // Regarder en Bas
-            if (x + 1 < 20 && Formulaire.matrice[x + 1, y] == 1)
+            if (x + 1 < 20 && Formulaire.matrice[x + 1, y] != 0)
             {
                 lsucc.Add(new Node4(x + 1, y));
             }
@@ -138,17 +138,17 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                 lsucc.Add(new Node4(x - 1, y - 1));
             }
             // Regarder en diagonale haut droit
-            if (x - 1 > -1 && y + 1 < 20 && Formulaire.matrice[x - 1, y + 1] == 1)
+            if (x - 1 > -1 && y + 1 < 20 && Formulaire.matrice[x - 1, y + 1] != 0)
             {
                 lsucc.Add(new Node4(x - 1, y + 1));
             }
             // Regarder en diagonale Bas gauche
-            if (x + 1 < 20 && y - 1 > -1 && Formulaire.matrice[x + 1, y - 1] == 1)
+            if (x + 1 < 20 && y - 1 > -1 && Formulaire.matrice[x + 1, y - 1] != 0)
             {
                 lsucc.Add(new Node4(x + 1, y - 1));
             }
             // Regarder en diagonale Bas droit
-            if (x + 1 < 20 && y + 1 < 20 && Formulaire.matrice[x + 1, y + 1] == 1)
+            if (x + 1 < 20 && y + 1 < 20 && Formulaire.matrice[x + 1, y + 1] != 0)
             {
                 lsucc.Add(new Node4(x + 1, y + 1));
             }
