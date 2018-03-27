@@ -142,7 +142,7 @@ namespace Projet_IA_Quentin_Juliette_Laurie
                 lsucc.Add(new Node4(x + 1, y));
             }
             // Regarder en diagonale haut gauche
-            if (x - 1 > -1 && y - 1 > -1 && Formulaire.matrice[x - 1, y - 1] == 1)
+            if (x - 1 > -1 && y - 1 > -1 && Formulaire.matrice[x - 1, y - 1] != 0)
             {
                 lsucc.Add(new Node4(x - 1, y - 1));
             }
