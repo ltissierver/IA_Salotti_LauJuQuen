@@ -66,17 +66,26 @@ namespace Projet_IA_Quentin_Juliette_Laurie
             }
             else
             {
+                List<bool> listeCheck = new List<bool> { Formulaire.CheckPoint1, Formulaire.CheckPoint2, Formulaire.CheckPoint3, Formulaire.CheckPoint4 };
                 List<int[]> mesCheck = new List<int[]> { Formulaire.check1, Formulaire.check2, Formulaire.check3, Formulaire.check4 };
-                double cout1 = CalculeHCostLocal(Formulaire.check1);
-                double cout2 = CalculeHCostLocal(Formulaire.check2);
-                double cout3 = CalculeHCostLocal(Formulaire.check3);
-                double cout4 = CalculeHCostLocal(Formulaire.check4);
-                double[] maListe = new double[] { cout1, cout2, cout3, cout4 };
-                double demiCout = maListe.Max(); // Renvoie valeur du demiCout
-                int indice = 0;
-                for (int i = 0; i < maListe.Count(); i++)
+                List<double> listeCout = new List<double> { };
+                for (int i = 3; i >= 0; i--)
                 {
-                    if (maListe[i] == demiCout) { indice = i; } // Récupère l'indice de la liste où la valeur est maximale
+                    if (listeCheck[i])
+                    {
+                        mesCheck.RemoveAt(i);
+                    }
+                    else
+                    {
+                        double coutLocal = CalculeHCostLocal(mesCheck[i]);
+                        listeCout.Add(coutLocal);
+                    }
+                }
+                double demiCout = listeCout.Max(); // Renvoie valeur du demiCout
+                int indice = 0;
+                for (int i = 0; i < listeCout.Count(); i++)
+                {
+                    if (listeCout[i] == demiCout) { indice = i; } // Récupère l'indice de la liste où la valeur est maximale
                 }
                 // Puis ajouter le cout vers le point initial (= coutRetour)
                 x = mesCheck[indice - 1][0];
